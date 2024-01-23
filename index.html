@@ -1,11 +1,10 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuesZBarto</title>
+    <title>QuesZbarto</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -167,15 +166,16 @@
         }
 
         /* Masquer l'onglet Accueil */
-    .nav-list .hidden-tab {
-        display: none;
-    }
+        .nav-list li.hidden-tab {
+            display: none;
+        }
     </style>
 </head>
+
 <body>
 
     <header class="header">
-        <h1 class="site-title">QuesZBarto</h1>
+        <h1 class="site-title">QuesZbarto</h1>
     </header>
 
     <nav class="navbar">
@@ -187,20 +187,13 @@
             <!-- Ajoutez d'autres onglets selon vos besoins -->
         </ul>
     </nav>
-    
+
     <div id="welcome-section" class="content-section">
-        <h2>Bienvenue sur QuesZBarto</h2>
-        <p>Découvrez un monde de réalité virtuelle exceptionnel avec QuesZBarto. Plongez dans des expériences immersives et explorez des univers fantastiques.</p>
+        <h2>Bienvenue sur QuesZbarto</h2>
+        <p>Découvrez un monde de réalité virtuelle exceptionnel avec QuesZbarto. Plongez dans des expériences immersives et explorez des univers fantastiques.</p>
         <img src="img\steam.png" alt="Expérience VR">
-        <p>Que vous soyez un novice curieux ou un passionné de longue date, QuesZBarto offre une variété de jeux et d'applications pour répondre à toutes les préférences.</p>
-        <a href="#" onclick="startAdventure()" class="cta-button">Commencez l'aventure VR</a>
-    </div>
-    
-    <div id="about-section" class="content-section">
-        <h2>À Propos de QuesZBarto</h2>
-        <p>Nous sommes dédiés à offrir les meilleures expériences de réalité virtuelle. Explorez un nouveau monde avec QuesZBarto!</p>
-        <p>Notre mission est de fournir des jeux et des applications de haute qualité pour les utilisateurs d'Oculus Quest et PCVR. Avec une équipe passionnée, nous travaillons constamment pour élargir notre bibliothèque et offrir des expériences immersives inoubliables.</p>
-        <p>Rejoignez-nous dans cette aventure virtuelle et découvrez un monde où l'imagination devient réalité.</p>
+        <p>Que vous soyez un novice curieux ou un passionné de longue date, QuesZbarto offre une variété de jeux et d'applications pour répondre à toutes les préférences.</p>
+        <a href="#" onclick="showSection('oculus-quest-section')" class="cta-button">Commencez l'aventure VR</a>
     </div>
 
     <div id="oculus-quest-section" class="content-section">
@@ -208,17 +201,26 @@
         <p>Découvrez nos jeux disponibles pour Oculus Quest.</p>
         <ul class="games-list">
             <li>
-                <img src="game1.jpg" alt="Illustration du Jeu 1" class="game-image">
+                <img src="img\cx-file-explorer.png" alt="Illustration du Jeu 1" class="game-image">
                 <div class="game-details">
-                    <h4>Titre 1</h4>
+                    <h4>Cx File Explorer</h4>
                     <p>Description du jeu 1.</p>
-                    <a href="#" class="download-button">Télécharger</a>
+                    <a href="gm\cx-file-explorer-2-0-3.apk" class="download-button">Télécharger</a>
                 </div>
             </li>
+            <li>
+                <img src="img\virtual-desktop.png" alt="Illustration du Jeu 1" class="game-image">
+                <div class="game-details">
+                    <h4>Virtual Desktop ( not verified )</h4>
+                    <p>Description du jeu 1.</p>
+                    <a href="gm\cx-file-explorer-2-0-3.apk" class="download-button">Télécharger</a>
+                </div>
+            </li>
+            
             <!-- Ajoutez d'autres jeux pour Oculus Quest -->
         </ul>
     </div>
-    
+
     <div id="pcvr-section" class="content-section">
         <h2>Jeux PCVR</h2>
         <p>Découvrez nos jeux disponibles pour PCVR.</p>
@@ -231,10 +233,34 @@
                     <a href="#" class="download-button">Télécharger</a>
                 </div>
             </li>
+            <li>
+                <img src="game3.jpg" alt="Illustration du Jeu 3" class="game-image">
+                <div class="game-details">
+                    <h4>Titre 3</h4>
+                    <p>Description du jeu 3.</p>
+                    <a href="#" class="download-button">Télécharger</a>
+                </div>
+            </li>
             <!-- Ajoutez d'autres jeux pour PCVR -->
         </ul>
     </div>
 
+    <div id="about-section" class="content-section">
+        <h2>À Propos de QuesZbarto</h2>
+        <p>Nous sommes passionnés par la réalité virtuelle et sommes déterminés à offrir les meilleures expériences à nos utilisateurs. Chez QuesZbarto, nous croyons en repousser les limites de l'immersion virtuelle et créer des mondes captivants.</p>
+        <p>Notre équipe de développeurs travaille sans relâche pour vous apporter des jeux et des applications de qualité, que vous soyez un joueur occasionnel ou un enthousiaste de la réalité virtuelle.</p>
+        <p>Explorez nos jeux pour Oculus Quest et PCVR, plongez dans des aventures épiques, et découvrez une nouvelle dimension de divertissement.</p>
+        <li>
+            <img src="img\cx-file-explorer.png" alt="Illustration du Jeu 1" class="game-image">
+            <div class="game-details">
+                <h4>Cx File Explorer</h4>
+                <p>Gérez vos fichiers de votre Meta Quest en toutes légalités.</p>
+                <p>Si vous n'installer pas ce fichier vous ne pourrez pas installer d'apk.</p>
+                <a href="gm\cx-file-explorer-2-0-3.apk" class="download-button">Ajoutez a votre Quest</a>
+            </div>
+        </li>
+    </div>
+    
     <!-- ... Autre code ... -->
 
     <script>
@@ -249,22 +275,24 @@
             // Affiche la notification de bienvenue au démarrage de la page
             showWelcomeNotification();
         }
-        function startAdventure() {
-        // Masque toutes les sections sauf celle spécifiée (À Propos)
-        document.querySelectorAll('.content-section').forEach(function(section) {
-            section.style.display = 'none';
-        });
 
-        // Affiche la section "À Propos"
-        document.getElementById('about-section').style.display = 'block';
+        // Affiche la notification de bienvenue
+        function showWelcomeNotification() {
+            var notification = document.getElementById('site-notification');
+            notification.classList.add('show');
 
-        // Active l'onglet "À Propos"
-        document.querySelectorAll('.nav-list a').forEach(function(tab) {
-            tab.classList.remove('active'); // Désactive tous les onglets
+            // Masque la notification après quelques secondes (ajustez le délai selon vos besoins)
+            setTimeout(function() {
+                notification.classList.remove('show');
+            }, 5000); // Disparaît après 5 secondes
+        }
+
+        // Affiche l'onglet "Accueil" par défaut au chargement de la page
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('welcome-section');
         });
-        document.querySelector('.nav-list a[href="#"]').classList.add('active'); // Active l'onglet "À Propos"
-    }
     </script>
 
 </body>
+
 </html>
