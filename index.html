@@ -1,0 +1,270 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuesZBarto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1b1b1b;
+            color: #fff;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .site-title {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar {
+            background-color: #222;
+            overflow: hidden;
+        }
+
+        .nav-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-list li {
+            margin: 0 15px;
+        }
+
+        .nav-list a {
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .nav-list a::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background-color: #45a049;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-list a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .content-section {
+            display: none;
+            padding: 20px;
+            background-color: #333;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .site-notification {
+            display: none;
+            padding: 10px;
+            background-color: #45a049;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+            filter: blur(10px);
+            border-radius: 5px;
+        }
+
+        .site-notification.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(20px);
+            filter: blur(0);
+        }
+
+        /* Style spécifique pour la page d'accueil */
+        #welcome-section {
+            text-align: center;
+        }
+
+        #welcome-section img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            margin-top: 20px;
+        }
+
+        #welcome-section p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        #welcome-section .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #45a049;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        #welcome-section .cta-button:hover {
+            background-color: #357f3e;
+        }
+
+        .nav-list .home-tab {
+            display: none;
+        }
+
+        /* Style pour les illustrations de jeux */
+        .games-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .game-image {
+            max-width: 100px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .game-details {
+            flex: 1;
+        }
+
+        /* Masquer l'onglet Accueil */
+    .nav-list .hidden-tab {
+        display: none;
+    }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="site-title">QuesZBarto</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="hidden-tab"><a href="#" onclick="showSection('welcome-section')">Accueil</a></li>
+            <li><a href="#" onclick="showSection('oculus-quest-section')">Quest</a></li>
+            <li><a href="#" onclick="showSection('pcvr-section')">PCVR</a></li>
+            <li><a href="#" onclick="showSection('about-section')">À Propos</a></li>
+            <!-- Ajoutez d'autres onglets selon vos besoins -->
+        </ul>
+    </nav>
+    
+    <div id="welcome-section" class="content-section">
+        <h2>Bienvenue sur QuesZBarto</h2>
+        <p>Découvrez un monde de réalité virtuelle exceptionnel avec QuesZBarto. Plongez dans des expériences immersives et explorez des univers fantastiques.</p>
+        <img src="img\steam.png" alt="Expérience VR">
+        <p>Que vous soyez un novice curieux ou un passionné de longue date, QuesZBarto offre une variété de jeux et d'applications pour répondre à toutes les préférences.</p>
+        <a href="#" onclick="startAdventure()" class="cta-button">Commencez l'aventure VR</a>
+    </div>
+    
+    <div id="about-section" class="content-section">
+        <h2>À Propos de QuesZBarto</h2>
+        <p>Nous sommes dédiés à offrir les meilleures expériences de réalité virtuelle. Explorez un nouveau monde avec QuesZBarto!</p>
+        <p>Notre mission est de fournir des jeux et des applications de haute qualité pour les utilisateurs d'Oculus Quest et PCVR. Avec une équipe passionnée, nous travaillons constamment pour élargir notre bibliothèque et offrir des expériences immersives inoubliables.</p>
+        <p>Rejoignez-nous dans cette aventure virtuelle et découvrez un monde où l'imagination devient réalité.</p>
+    </div>
+
+    <div id="oculus-quest-section" class="content-section">
+        <h2>Jeux pour Oculus Quest</h2>
+        <p>Découvrez nos jeux disponibles pour Oculus Quest.</p>
+        <ul class="games-list">
+            <li>
+                <img src="game1.jpg" alt="Illustration du Jeu 1" class="game-image">
+                <div class="game-details">
+                    <h4>Titre 1</h4>
+                    <p>Description du jeu 1.</p>
+                    <a href="#" class="download-button">Télécharger</a>
+                </div>
+            </li>
+            <!-- Ajoutez d'autres jeux pour Oculus Quest -->
+        </ul>
+    </div>
+    
+    <div id="pcvr-section" class="content-section">
+        <h2>Jeux PCVR</h2>
+        <p>Découvrez nos jeux disponibles pour PCVR.</p>
+        <ul class="games-list">
+            <li>
+                <img src="game3.jpg" alt="Illustration du Jeu 3" class="game-image">
+                <div class="game-details">
+                    <h4>Titre 3</h4>
+                    <p>Description du jeu 3.</p>
+                    <a href="#" class="download-button">Télécharger</a>
+                </div>
+            </li>
+            <!-- Ajoutez d'autres jeux pour PCVR -->
+        </ul>
+    </div>
+
+    <!-- ... Autre code ... -->
+
+    <script>
+        // Masque toutes les sections sauf celle spécifiée
+        function showSection(sectionId) {
+            document.querySelectorAll('.content-section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(sectionId).style.display = 'block';
+
+            // Affiche la notification de bienvenue au démarrage de la page
+            showWelcomeNotification();
+        }
+        function startAdventure() {
+        // Masque toutes les sections sauf celle spécifiée (À Propos)
+        document.querySelectorAll('.content-section').forEach(function(section) {
+            section.style.display = 'none';
+        });
+
+        // Affiche la section "À Propos"
+        document.getElementById('about-section').style.display = 'block';
+
+        // Active l'onglet "À Propos"
+        document.querySelectorAll('.nav-list a').forEach(function(tab) {
+            tab.classList.remove('active'); // Désactive tous les onglets
+        });
+        document.querySelector('.nav-list a[href="#"]').classList.add('active'); // Active l'onglet "À Propos"
+    }
+    </script>
+
+</body>
+</html>
