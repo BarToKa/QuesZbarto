@@ -128,20 +128,28 @@
             margin-top: 20px;
         }
 
-        #welcome-section .cta-button {
+        .cta-button,
+        .download-button {
             display: inline-block;
             padding: 12px 24px;
             font-size: 16px;
-            background-color: #45a049;
+            background-color: rgba(255, 255, 255, 0.1); /* Couleur principale du site */
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s;
             margin-top: 20px;
+            border: none; /* Ajout d'une bordure */
+            cursor: pointer;
+        }
+
+        .cta-button:hover,
+        .download-button:hover {
+            background-color: #2b2b2b; /* Couleur au survol */
         }
 
         #welcome-section .cta-button:hover {
-            background-color: #357f3e;
+            background-color: #2b2b2b;
         }
 
         .nav-list .home-tab {
@@ -205,10 +213,9 @@
                 <div class="game-details">
                     <h4>Cx File Explorer</h4>
                     <p>Description du jeu 1.</p>
-                    <a href="gm\cx-file-explorer-2-0-3.apk" class="download-button">Télécharger</a>
+                    <a href="gm\cx-file-explorer-2-0-3.apk" class="download-button">Ajouter au Quest</a>
                 </div>
             </li>
-            
             
             <!-- Ajoutez d'autres jeux pour Oculus Quest -->
         </ul>
@@ -223,7 +230,7 @@
                 <div class="game-details">
                     <h4>Titre 3</h4>
                     <p>Description du jeu 3.</p>
-                    <a href="#" class="download-button">Télécharger</a>
+                    <a href="#" class="download-button">Ajouter au Quest</a>
                 </div>
             </li>
             <li>
@@ -231,7 +238,7 @@
                 <div class="game-details">
                     <h4>Titre 3</h4>
                     <p>Description du jeu 3.</p>
-                    <a href="#" class="download-button">Télécharger</a>
+                    <a href="#" class="download-button">Ajouter au Quest</a>
                 </div>
             </li>
             <!-- Ajoutez d'autres jeux pour PCVR -->
@@ -249,7 +256,7 @@
                 <h4>Cx File Explorer</h4>
                 <p>Gérez vos fichiers de votre Meta Quest en toutes légalités.</p>
                 <p>Si vous n'installer pas ce fichier vous ne pourrez pas installer d'apk.</p>
-                <a href="gm\cx-file-explorer-2-0-3.apk" class="download-button">Ajoutez a votre Quest</a>
+                <a href="gm\cx-file-explorer-2-0-3.apk" class="download-button">Ajouter au Quest</a>
             </div>
         </li>
         <li>
@@ -257,7 +264,7 @@
             <div class="game-details">
                 <h4>Virtual Desktop ( not verified )</h4>
                 <p>émuler votre pc a distance</p>
-                <a href="gm\Virtual_Desktop-1.2.1.18.apk" class="download-button">Ajoutez a votre Quest</a>
+                <a href="gm\Virtual_Desktop-1.2.1.18.apk" class="download-button">Ajouter au Quest</a>
             </div>
         </li>
     </div>
